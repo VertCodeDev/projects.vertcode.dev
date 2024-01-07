@@ -1,10 +1,10 @@
 import {CollectionConfig} from "payload/types";
 
-const CodingLanguages: CollectionConfig = {
-    slug: 'coding_languages',
+const Technologies: CollectionConfig = {
+    slug: 'technologies',
     labels: {
-        singular: 'Coding Language',
-        plural: 'Coding Languages',
+        singular: 'Technology',
+        plural: 'Technologies',
     },
     admin: {
         useAsTitle: 'name',
@@ -27,4 +27,4 @@ const CodingLanguages: CollectionConfig = {
     ],
 };
 
-export default CodingLanguages;
+export default Technologies;

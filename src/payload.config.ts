@@ -8,7 +8,7 @@ import {buildConfig} from 'payload/config'
 
 import Users from './collections/Users'
 import Media from "./collections/Media";
-import CodingLanguages from "./collections/CodingLanguages";
+import Technologies from "./collections/Technologies";
 import Projects from "./collections/Projects";
 import ProjectBlocks from "./collections/ProjectBlocks";
 import Partners from "./collections/Partners";
@@ -19,7 +19,7 @@ export default buildConfig({
         bundler: webpackBundler(),
     },
     editor: slateEditor({}),
-    collections: [Users, CodingLanguages, Media, Projects, ProjectBlocks, Partners],
+    collections: [Users, Technologies, Media, Projects, ProjectBlocks, Partners],
     typescript: {
         outputFile: path.resolve(__dirname, 'payload-types.ts'),
     },
