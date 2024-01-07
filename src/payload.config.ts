@@ -12,6 +12,7 @@ import Technologies from "./collections/Technologies";
 import Projects from "./collections/Projects";
 import ProjectBlocks from "./collections/ProjectBlocks";
 import Partners from "./collections/Partners";
+import ProjectCategory from "./collections/ProjectCategory";
 
 export default buildConfig({
     admin: {
@@ -19,7 +20,7 @@ export default buildConfig({
         bundler: webpackBundler(),
     },
     editor: slateEditor({}),
-    collections: [Users, Technologies, Media, Projects, ProjectBlocks, Partners],
+    collections: [Users, Technologies, Media, Projects, ProjectCategory, ProjectBlocks, Partners],
     typescript: {
         outputFile: path.resolve(__dirname, 'payload-types.ts'),
     },

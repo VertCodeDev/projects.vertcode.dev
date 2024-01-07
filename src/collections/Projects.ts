@@ -1,4 +1,15 @@
 import {CollectionConfig} from "payload/types";
+import projectCategory from "./ProjectCategory";
+
+// Fields:
+// - thumbnail (relationship to media)
+// - name (text)
+// - startDate (date)
+// - endDate (date, not required)
+// - category (relationship to projectCategory)
+// - description (textarea)
+// - technologies (relationship to technologies)
+// - projectBlocks (relationship to projectBlocks)
 
 const Projects: CollectionConfig = {
     slug: 'projects',
@@ -14,34 +25,40 @@ const Projects: CollectionConfig = {
     },
     fields: [
         {
+            name: 'thumbnail',
+            label: 'Thumbnail',
+            type: 'upload',
+            relationTo: 'media',
+            required: true,
+        },
+        {
             name: 'name',
             label: 'Name',
             type: 'text',
             required: true,
         },
         {
-            name: 'description',
-            label: 'Description',
-            type: 'richText',
-            required: true,
-        },
-        {
-            name: 'start_date',
+            name: 'startDate',
             label: 'Start Date',
             type: 'date',
             required: true,
         },
         {
-            name: 'end_date',
+            name: 'endDate',
             label: 'End Date',
             type: 'date',
-            required: false,
         },
         {
-            name: 'thumbnail',
-            label: 'Thumbnail',
-            type: 'upload',
-            relationTo: 'media',
+            name: 'category',
+            label: 'Category',
+            type: 'relationship',
+            relationTo: 'project_categories',
+            required: true,
+        },
+        {
+            name: 'description',
+            label: 'Description',
+            type: 'textarea',
             required: true,
         },
         {
@@ -50,13 +67,15 @@ const Projects: CollectionConfig = {
             type: 'relationship',
             relationTo: 'technologies',
             hasMany: true,
+            required: true,
         },
         {
-            name: 'project_blocks',
+            name: 'projectBlocks',
             label: 'Project Blocks',
             type: 'relationship',
             relationTo: 'projects_blocks',
             hasMany: true,
+            required: true,
         },
     ]
 };
