@@ -45,10 +45,10 @@ const Projects: CollectionConfig = {
             required: true,
         },
         {
-            name: 'coding_languages',
-            label: 'Coding Languages',
+            name: 'technologies',
+            label: 'Technologies',
             type: 'relationship',
-            relationTo: 'coding_languages',
+            relationTo: 'technologies',
             hasMany: true,
         },
         {
