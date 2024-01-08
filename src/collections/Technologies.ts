@@ -17,12 +17,20 @@ const Technologies: CollectionConfig = {
             name: 'name',
             label: 'Name',
             type: 'text',
+            required: true,
+        },
+        {
+            name: 'bgColor',
+            label: 'Background Color',
+            type: 'text',
+            required: true,
         },
         {
             name: 'icon',
             label: 'Icon',
             type: 'upload',
             relationTo: 'media',
+            required: true,
         },
     ],
 };
