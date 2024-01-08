@@ -27,6 +27,12 @@ const Partners: CollectionConfig = {
             required: true,
         },
         {
+            name: "invertColors",
+            label: "Invert Colors",
+            type: "checkbox",
+            defaultValue: false,
+        },
+        {
             name: 'url',
             label: 'URL',
             type: 'text',
