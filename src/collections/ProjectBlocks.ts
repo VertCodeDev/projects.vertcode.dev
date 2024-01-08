@@ -17,9 +17,9 @@ const ProjectBlocks: CollectionConfig = {
             required: true,
         },
         {
-            name: 'description',
-            label: 'Description',
-            type: 'richText',
+            name: 'content',
+            label: 'Content',
+            type: 'textarea',
             required: true,
         },
         {
